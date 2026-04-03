@@ -1,0 +1,86 @@
+    ---
+    import Layout from "../layouts/Layout.astro";
+    const ACCESS_KEY = import.meta.env.WEB3FORMS_KEY; 
+    ---
+
+<Layout title="Contact Us | Pro Grace Production">
+    <main>
+        <section class="max-w-7xl h-screen flex justify-center items-center mx-auto my-10 p-5 rounded-2xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex flex-col gap-12">
+                    <div>
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">Let's Bring Your Vision Into Focus.</h1>
+                        <p class="font-display text-justify">Whether starting a cinematic collaboration, inquiring about our services, or simply saying hello—we're ready to listen. </p>
+                    </div>
+                    <div class="md:flex flex-col hidden font-display">
+                        <span>Email:</span>
+                        <span class="tracking-wide"><strong>prograceproduction@gmail.com</strong></span>
+                    </div>
+                    <div class="md:flex flex-col hidden font-display">
+                        <span>Phone:</span>
+                        <span class="tracking-wide"><strong>085156701523</strong></span>
+                    </div>
+                </div>
+                <form id="form" action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-6">
+                    <input type="hidden" name="access_key" value={ACCESS_KEY}>
+                    <input type="hidden" name="subject" value="New Message: Pro Grace Production">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <div class="flex flex-col gap-6">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" required class="form-input">
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" required class="form-input">
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" rows="4" class="form-input resize-none"></textarea>
+                    </div>
+                    <button type="submit" id="button" class="py-2 bg-zinc-900 border border-zinc-800 font-serif uppercase tracking-[0.2em] hover:bg-zinc-700 active:bg-zinc-700 transition-all duration-300">SEND INQUIRY</button>
+                    <div id="result" class="font font-display italic text-zinc-600"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script is:inline>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    const button = document.getElementById('button');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object)
+        result.innerHTML = "Sending...";
+        button.disabled = true;
+        button.style.opacity = '0.5';
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async(response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Your message has been sent succesfully.";
+                form.reset();
+            } else {
+                result.innerHTML = json.message;
+            }
+        }) 
+        .catch (error => {
+            console.log(error);
+            result.innerHTML = 'Something went wrong!';
+        })
+        .finally(() => {
+            button.disabled = false;
+            button.style.opacity = "1";
+        })
+    })
+</script>

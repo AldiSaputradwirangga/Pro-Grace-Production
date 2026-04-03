@@ -1,0 +1,74 @@
+<section class="px-5 md:my-40 my-20 flex flex-col items-center">
+    <h3 class="font-serif text-[24px] md:text-4xl font-bold py-4 md:hidden">BEHIND THE PROCESS</h3>
+    <div id="bts-carousel" class="md:grid md:grid-cols-16 md:gap-10 md:overflow-visible flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-0">
+        <figure class="bts-photos md:col-span-7 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 1.webp" alt="Behind The Process Photo">
+        </figure>
+        <figure class="bts-photos md:col-span-5 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 2.webp" alt="Behind The Process Photo">
+        </figure>
+        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 3.webp" alt="Behind The Process Photo">
+        </figure>
+        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 4.webp" alt="Behind The Process Photo">
+        </figure>
+        <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 5.webp" alt="Behind The Process Photo">
+        </figure>
+        <figure class="bts-photos md:col-span-7 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 6.webp" alt="Behind The Process Photo">
+        </figure>
+         <figure class="bts-photos md:col-span-7 bts-hover">
+             <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 7.webp" alt="Behind The Process Photo">
+        </figure>
+         <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 8.webp" alt="">
+        </figure>
+        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <img src="/Bts/BTS 9.webp" alt="Behind The Process Photo">
+        </figure>  
+        </div>
+        <div id="dots-container" class="flex justify-center gap-2 mt-6 md:hidden"></div>
+</section>
+<script>
+    const carousel = document.querySelector('#bts-carousel');
+    const dotsContainer = document.querySelector('#dots-container');
+    const slides = carousel.querySelectorAll(':scope > figure');
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'h-1 w-1.5 rounded-full bg-white/20 transition-all duration-300 ease-out';
+        if (i === 0)dot.classList.add('bg-white', 'w-4');
+        dotsContainer?.appendChild(dot);
+    });
+
+    const dots = dotsContainer?.querySelectorAll('div');
+
+   carousel.addEventListener('scroll', () => {
+    const width = carousel.offsetWidth;
+    const scrollLeft = carousel.scrollLeft;
+
+    // Use Math.floor and add half-width offset. 
+    // This is the industry standard for "Instagram-style" snappers.
+    const index = Math.floor((scrollLeft + width / 2) / width);
+
+    // Apply to dots
+    dots.forEach((dot, i) => {
+        if (i === index) {
+            dot.className = 'h-1 w-4 rounded-full bg-white transition-all duration-300';
+        } else {
+            dot.className = 'h-1.5 w-1.5 rounded-full bg-white/20 transition-all duration-300';
+        }
+    });
+});
+</script>

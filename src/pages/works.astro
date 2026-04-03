@@ -1,0 +1,32 @@
+    ---
+    import Layout from "../layouts/Layout.astro";
+    import FilmCard from "../components/filmCard.astro";
+    ---
+
+<Layout title="Our Works| Pro Grace Production">
+    <main>
+        <section>
+            <div class="mt-30 flex flex-col items-center justify-center gap-1">
+                <h1 class="font-heading font-semibold text-[26px] md:text-3xl">Our Project</h1>
+                <div class="md:grid grid-cols-12 max-w-7xl gap-6 p-6">
+                    <figure class="flex flex-col items-center gap-2 lg:col-span-4 md:col-span-6 mb-6">
+                        <FilmCard />
+                    </figure>
+                    <figure class="flex flex-col items-center gap-3 lg:col-span-4 md:col-span-6">
+                        <img src="/coming soon.webp" alt="Coming Soon" class="opacity-50">
+                         <h2 class="font-heading text-[14px] md:text-2xl tracking-wide text-white/40">Coming Soon...</h2>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="flex items-center justify-around my-20">
+            <div class="max-w-7xl flex flex-col items-center gap-10">
+                <div class="flex flex-col items-center">
+                    <h3 class="font-serif font-bold tracking-wide text-2xl">Want To Start Your Own Project?</h3>
+                    <span class="font-display text-white/40">We're always ready.</span>
+                </div>
+                <a href="/contact" class="py-2 px-4 rounded-[10px] bg-[#003229] font-display font-bold tracking-wide transiton-all duration-300 hover:bg-[#002d24] cursor-pointer"><button>CONTACT US</button></a>
+            </div>
+        </section>
+    </main>
+</Layout>
