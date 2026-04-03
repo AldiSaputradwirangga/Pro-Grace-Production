@@ -1,0 +1,68 @@
+<header id="main-nav" class="md:bg-transparent md:py-10 p-2.5 fixed top-0 w-full duration-700 ease-in-out bg-black z-100">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- This is the logo -->
+         <div>
+            <a href="/" class="logo">
+                <img src="/logo.webp" alt="Pro Grace Logo" class="max-h-10">
+                <span class="logo-text">PRO GRACE<br>PRODUCTION</span>
+            </a>
+         </div>
+         
+         <!-- This is navigation menu -->
+        <nav class="hidden md:flex">
+            <ul class="bg-transparent flex items-center gap-6"> 
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/works" class="nav-link">Works</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/team" class="nav-link">Teams</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-btn" class="block md:hidden transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl flex flex-col items-center gap-6 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 md:hidden border-t border-[#828282]">
+            <div class="py-5 flex flex-col gap-4 w-full text-center">
+                <a href="/" class="nav-link text-xl">Home</a>
+                <a href="/works" class="nav-link text-xl">Works</a>
+                <a href="/about" class="nav-link text-xl">About</a>
+                <a href="/team" class="nav-link text-xl">Teams</a>
+                <a href="/contact" class="nav-link text-xl">Contact</a>
+            </div>
+        </div>
+</div>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('#main-nav');
+
+    btn?.addEventListener('click', () => {
+        // We check if it's currently closed
+        const isClosed = menu.classList.contains('max-h-0');
+
+        if (isClosed) {
+            // OPEN: Remove collapsed classes, add expanded classes
+            menu.classList.remove('max-h-0', 'opacity-0');
+            menu.classList.add('max-h-screen', 'opacity-100');
+        } else {
+            // CLOSE: Add collapsed classes, remove expanded classes
+            menu.classList.add('max-h-0', 'opacity-0');
+            menu.classList.remove('max-h-screen', 'opacity-100');
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+            nav?.classList.add('md:bg-black/90', 'md:backdrop-blur-md', 'md-py-2');
+            nav?.classList.remove('md:bg-transparent', 'md:py-10');
+        } else {
+            nav?.classList.add('md:bg-transparent', 'md:py-10');
+            nav?.classList.remove('md:bg-black/90', 'md:backdrop-blur-md', 'md:py-0');
+        }
+    });
+</script>

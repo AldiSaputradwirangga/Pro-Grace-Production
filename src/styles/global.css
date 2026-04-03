@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+    --font-serif : "Cormorant Garamond", serif;
+
+    --font-display : "Playfair Display", serif;
+
+    --font-heading : "EB Garamond", serif;
+}
+
+@layer components {
+    .nav-link {
+        @apply hover:font-bold delay-100 text-[#f2f2f2] font-serif font-medium text-[1.1rem] tracking-wider active:font-bold;
+    }
+    .rounded-box {
+        @apply bg-[#bdbdbd] opacity-25 rounded h-[4px];
+    }
+    .border-color {
+        @apply before:bg-[#828282] after:bg-[#828282];
+    }
+    .border-horizontal {
+        @apply before:content-[''] before:absolute before:h-px;
+    }
+    .border-vertical {
+        @apply after:content-[''] after:absolute after:w-px after:top-2.75;
+    }
+    .quote-border-position {
+        @apply before:top-2.75 after:bottom-0;
+    }
+    .bts-text {
+        @apply font-serif text-2xl font-bold tracking-wide hidden md:block;
+    }
+    .bts-photos {
+        @apply shrink-0 w-full snap-center md:w-auto;
+    }
+    .bts-hover {
+        @apply transition-all duration-600 hover:scale-105 active:scale-95 cursor-pointer;
+    }
+    .logo {
+        @apply  flex items-center gap-3;
+    }
+    .logo-text {
+        @apply font-heading font-medium tracking-widest;
+    }
+    .footer-contact {
+        @apply flex gap-2 items-center mt-5;
+    }
+    .crew-card {
+        @apply col-span-12 sm:col-span-6 md:col-span-4;
+    }
+    .offer-grid {
+        @apply col-span-12 bg-[#1e1e1e] p-5 rounded-2xl flex flex-col gap-6 lg:justify-around sm:col-span-6 lg:col-span-4 lg:aspect-square;
+    }
+    .grid-hover {
+        @apply active:scale-95 transition-all duration-600 hover:shadow-[inset_0_0_0_2px_#1F8674] hover:scale-105;
+    }
+    .offer-number {
+        @apply flex items-center justify-center bg-[#161616] w-10 aspect-square sm:w-13 md:w-15 rounded-full;
+    }
+    .offer-number-font {
+        @apply font-mono text-[#1F8674] font-bold sm:text-2xl md:text-3xl;
+    }
+}
+
+/*About page*/
+@layer components {
+
+    /*Four Core Values*/
+    .core-values-img {
+        @apply hidden md:block object-cover rounded-2xl;
+    }
+    .core-values-list {
+        @apply w-full h-full gap-6 md:absolute md:max-w-1/2 grid md:place-content-center;
+    }
+    .core-values-item {
+        @apply flex gap-2 sm:gap-6 p-2 pb-5 bg-[#1A1A1A] rounded-2xl;
+    }
+    .core-number {
+        @apply font-display text-4xl sm:text-6xl;
+    }
+    .core-caption {
+        @apply font-display tracking-wide text-[14px] sm:text-[16px];
+    }
+    .core-values {
+        @apply font-bold my-4 sm:my-7;
+    }
+    .about-logo-border {
+        @apply absolute left-1/8 right-1/8 h-px top-1/2 -translate-y-1/2 md:inset-0 md:left-1/2 md:translate-y-0 md:-translate-x-1/2 md:w-0.5 md:h-auto bg-white/30;
+    }
+    .about-logo-title {
+        @apply font-display tracking-wide text-[24px] font-medium text-nowrap;
+    }
+}
+
+/* Luruh info at LURUH.astro */
+@layer components {
+    .luruh-info-grid {
+        @apply col-span-12 sm:col-span-4 md:col-span-2 flex flex-col items-center;
+    }
+    .luruh-info-text {
+        @apply font-display text-[12px] text-white/40 text-nowrap;
+    }
+    .text-decoration {
+        @apply font-semibold text-2xl;
+    }
+    .team-card {
+        @apply flex items-center gap-2.5;
+    }
+    .team-picture {
+        @apply aspect-square w-16 h-16;
+    }
+    .team-info {
+        @apply font-display text-nowrap tracking-wide flex flex-col min-w-0;
+    }
+    .team-name {
+        @apply font-medium text-sm leading-tight wrap-break-word truncate;
+    }
+    .team-role {
+        @apply text-[10px] text-zinc-500 uppercase tracking-widest mt-1;
+    }
+    
+}
+
+/* Contact Frm */
+@layer component {
+    .form-label {
+        @apply font-display text-sm uppercase tracking-widest text-zinc-500;
+    }
+    .form-input {
+        @apply outline-none border-b border-b-zinc-800 transition-colors font-display py-2;
+    }
+}
+:root {
+    --brand-gray: #fefefe;
+}
+
+#hamburger-icon.open .line-1 {
+    transform: translateY(7px) rotate(45deg);
+}
+
+/* 2. Fade out the middle line */
+#hamburger-icon.open .line-2 {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+/* 3. Rotate the bottom line -45 degrees */
+#hamburger-icon.open .line-3 {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@custom-variant hover (&:hover)
