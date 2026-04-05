@@ -1,41 +1,54 @@
+---
+    import { Image } from "astro:assets";
+    import BTS1 from '../assets/bts/BTS 1.webp'
+    import BTS2 from '../assets/bts/BTS 2.webp'
+    import BTS3 from '../assets/bts/BTS 3.webp'
+    import BTS4 from '../assets/bts/BTS 4.webp'
+    import BTS5 from '../assets/bts/BTS 5.webp'
+    import BTS6 from '../assets/bts/BTS 6.webp'
+    import BTS7 from '../assets/bts/BTS 7.webp'
+    import BTS8 from '../assets/bts/BTS 8.webp'
+    import BTS9 from '../assets/bts/BTS 9.webp'
+---
+
 <section class="px-5 md:my-40 my-20 flex flex-col items-center">
     <h3 class="font-serif text-[24px] md:text-4xl font-bold py-4 md:hidden">BEHIND THE PROCESS</h3>
     <div id="bts-carousel" class="md:grid md:grid-cols-16 md:gap-10 md:overflow-visible flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-0">
         <figure class="bts-photos md:col-span-7 bts-hover">
             <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 1.webp" alt="Behind The Process Photo">
-        </figure>
-        <figure class="bts-photos md:col-span-5 bts-hover">
-            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 2.webp" alt="Behind The Process Photo">
-        </figure>
-        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
-            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 3.webp" alt="Behind The Process Photo">
-        </figure>
-        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
-            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 4.webp" alt="Behind The Process Photo">
+            <Image src={BTS1} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
         </figure>
         <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
             <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 5.webp" alt="Behind The Process Photo">
-        </figure>
-        <figure class="bts-photos md:col-span-7 bts-hover">
-            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 6.webp" alt="Behind The Process Photo">
-        </figure>
-         <figure class="bts-photos md:col-span-7 bts-hover">
-             <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 7.webp" alt="Behind The Process Photo">
-        </figure>
-         <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
-            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 8.webp" alt="">
+            <Image src={BTS2} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
         </figure>
         <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
             <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
-            <img src="/Bts/BTS 9.webp" alt="Behind The Process Photo">
+            <Image src={BTS3} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS4} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+        <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS5} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+        <figure class="bts-photos md:col-span-7 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS6} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+         <figure class="bts-photos md:col-span-7 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS7} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+         <figure class="bts-photos md:col-span-5 md:mt-10 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS8} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
+        </figure>
+        <figure class="bts-photos md:col-span-4 md:mt-15 bts-hover">
+            <figcaption class="bts-text">BEHIND THE PROCESS</figcaption>
+            <Image src={BTS9} alt="Behind The Process" decoding="async" loading="lazy" class="object-cover"/>
         </figure>  
         </div>
         <div id="dots-container" class="flex justify-center gap-2 mt-6 md:hidden"></div>

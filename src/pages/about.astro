@@ -1,6 +1,14 @@
-    ---
+---
+    import {Image} from 'astro:assets'
     import Layout from '../layouts/Layout.astro';
-    ---
+    import Nanda from '../assets/about/Talent Coordinator.webp'
+    import Gita from '../assets/about/Director and Assistant Director.webp'
+    import Crew1 from '../assets/about/crew on set 1.webp'
+    import Crew2 from '../assets/about/crew on set 2.webp'
+    import Logo from '../assets/logo.webp'
+    import Clover from '../assets/about/clover.webp'
+    import Aperture from '../assets/about/aperture.webp'
+---
 
 <Layout title='About Us | Pro Grace Production'>
     <main>
@@ -13,10 +21,10 @@
                 </div>
                 <div class="hidden sm:grid grid-cols-6 p-5 gap-4">
                     <figure class="col-span-4">
-                        <img src="/about page/Director and Assistant Director.webp" alt="The Director and Assistant Director" class="m-full h-full object-cover rounded-s-2xl">
+                        <Image src={Gita} alt="The Director and Assistant Director" class="m-full h-full object-cover rounded-s-2xl" loading="eager" decoding="async"/>
                     </figure>
                     <figure class="col-span-2">
-                        <img src="/about page/Talent Coordinator.webp" alt="Betrics Martina" class="m-full h-full object-cover rounded-e-2xl">
+                        <Image src={Nanda} alt="Betrics Martina"  class="m-full h-full object-cover rounded-e-2xl" decoding="async" loading="eager"/>
                     </figure>
                 </div>
             </div>
@@ -27,7 +35,7 @@
             <p class="font-display text[14px] sm:text-[16px] tracking-wide opacity-95 pb-5">Our work is guided by four core values:</p>
             <div class="flex items-end justify-end relative mt-15">
                 <figure>
-                    <img src="/about page/crew on set 1.webp" alt="Crew on set" class="core-values-img">
+                    <Image src={Crew1} loading="lazy" decoding="async"  alt="Crew on set" class="core-values-img"/>
                 </figure>
                 <div class="core-values-list left-0 md:place-items-start 2xl:left-40">
                     <div class="core-values-item">
@@ -48,7 +56,7 @@
             </div>
              <div class="flex items-start justify-start relative pt-5 md:mt-30 lg:mt-15">
                 <figure>
-                    <img src="/about page/crew on set 2.webp" alt="Crew on set" class="core-values-img">
+                    <Image src={Crew2} loading="lazy" decoding="async" alt="Crew on set" class="core-values-img"/>
                 </figure>
                 <div class="core-values-list right-0 md:place-items-end 2xl:right-40">
                     <div class="core-values-item">
@@ -72,7 +80,7 @@
         <section class="max-w-7xl mx-auto mt-40 mb-20">
              <div class="grid place-items-center text-center mb-8">
                  <figure class="w-25 aspect-square">
-                     <img src="/logo.webp" alt="Pro Grace Logo">
+                    <Image src={Logo} alt="Pro Grace Logo" loading="lazy" width={150} height={150} decoding="async"/>
                  </figure>
                  <h2 class="font-display text-[26px] sm:text-4xl font-bold tracking-wide text-nowrap">OUR LOGO</h2>
              </div>
@@ -80,14 +88,14 @@
                 <div class="about-logo-border"></div>
                 <div class="flex flex-col items-center md:items-end gap-3 pb-15 md:pb-0">
                     <figure class="w-10 aspect-square">
-                        <img src="/about page/clover.webp" alt="Four Leaf Clover">
+                        <Image src={Clover} alt="Four Leaf Clover" loading="lazy" decoding="async" width={75} height={75}/>
                     </figure>
                     <h3 class="about-logo-title">Four Leaf Clover</h3>
                     <p class="text-justify font-display tracking-wide text-[14px] sm:text-[16px] md:text-right">Four-leaf clover to us is more than a symbol of luck; it is a representation of the four pillars that support our creative journey. Each leaf carries a distinct meaning: first leaf carries the meaning of Love, the second for Hope in the future, the third for faith in our collective vision, and the fourth for the Luck that finds us when we are truly prepared. By rooting Pro Grace in these values, we ensure that every project we create is guided by sense of purpose and a “good omen” for the stories we bring to life</p>
                 </div>
                 <div class="flex flex-col items-center md:items-start gap-3">
                     <figure class="w-10 aspect-square">
-                        <img src="/about page/aperture.webp" alt="Camera Aperture">
+                        <Image src={Aperture} alt="Camera Aperture" width={75} height={75} loading="lazy" decoding="async"/>
                     </figure> 
                     <h3 class="about-logo-title">Four Leaf Clover</h3>
                     <p class="text-justify font-display tracking-wide text-[14px] sm:text-[16px] md:text-left">Four-leaf clover to us is more than a symbol of luck; it is a representation of the four pillars that support our creative journey. Each leaf carries a distinct meaning: first leaf carries the meaning of Love, the second for Hope in the future, the third for faith in our collective vision, and the fourth for the Luck that finds us when we are truly prepared. By rooting Pro Grace in these values, we ensure that every project we create is guided by sense of purpose and a “good omen” for the stories we bring to life</p>

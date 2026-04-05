@@ -1,4 +1,11 @@
-<a href="/LURUH"><img src="/poster.webp" alt="LURUH Poster" class="w-full object-cover"></a>
+---
+    import { Image } from "astro:assets";
+    import Poster from '../assets/works/poster.webp'
+---
+
+<a href="/LURUH">
+    <Image src={Poster} alt="LURUH Poster" loading="eager" decoding="async" class="w-full object-cover"/>
+</a>
 <div class="flex items-center flex-col">
     <h2 class="font-heading text-[20px] md:text-3xl tracking-wide">LURUH</h2>
     <span class="font-serif tracking-wide text-white/40">Short Film</span>

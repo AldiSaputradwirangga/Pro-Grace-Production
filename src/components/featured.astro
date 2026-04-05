@@ -1,13 +1,17 @@
+---
+    import {Image} from 'astro:assets';
+    import Poster from '../assets/index image/poster.webp'
+---
         <section class="max-w-7xl m-auto flex flex-col items-center gap-3 mt-40">
             <h2 class="font-serif text-[24px] md:text-4xl font-bold">FEATURED PROJECT</h2>
               <div class="flex gap-15 md:bg-[#0f0f0f] movie-card">
                 <figure id="poster" class="relative inset-0 md:max-w-[50%] h-full object-cover px-6 md:px-0" onclick="">
-                    <img src="/poster.webp" alt="LURUH poster" class="w-full h-full object-cover">
+                    <Image src={Poster} alt="LURUH poster" height="2000" loading="lazy" decodin="async" class="w-full h-full object-cover"/>
                     <!-- Mobile Buttton -->
                     <article class="flex flex-col gap-10 justify-center px-15 bg-[#0f0f0f]/70 absolute inset-0 info-overlay opacity-0 backdrop-blur-sm transition-opacity duration-300 md:hidden">
                         <div class="flex flex-col">
                             <h3 class="font-serif text-4xl md:text-7xl font-bold tracking-wide">LURUH</h3>
-                            <span class="font-display text-[.9rem] font-medium tracking-wide">Short Film • Drama • 2025</span>
+                            <span class="font-display text-[.9rem] tracking-wide opacity-40">Short Film • Drama • 2025</span>
                         </div>
                         <p class="font-display tracking-wide text-[14px] md:text-4xl">When two siblings have different view on how to care for their aging mother, exhaustion, and misunderstanding slowly erode their love until tragic decision changes everything.</p>
                         <a href="/LURUH" class="bg-[#003229] max-w-50 h-10 font-display font-semibold flex justify-center items-center rounded-full tracking-wide transition-all duration-300 hover:bg-[#002d24]">
@@ -18,7 +22,7 @@
                 <article id="mobile-display" class="md:flex md:flex-col gap-10 justify-center pr-10 hidden">
                     <div class="flex flex-col">
                         <h3 class="font-serif text-7xl font-bold tracking-wide">LURUH</h3>
-                        <span class="font-display text-[.9rem] font-medium tracking-wide">Short Film • Drama • 2025</span>
+                        <span class="font-display text-[.9rem] tracking-wide opacity-40">Short Film • Drama • 2025</span>
                     </div>
                     <p class="font-display tracking-wide">When two siblings have different view on how to care for their aging mother, exhaustion, and misunderstanding slowly erode their love until tragic decision changes everything.</p>
                     <a href="/LURUH" class="bg-[#003229] max-w-50 h-10 font-display font-semibold flex justify-center items-center rounded-full tracking-wide transition-all duration-300 hover:bg-[#002d24]">

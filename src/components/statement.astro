@@ -1,3 +1,8 @@
+---
+    import { Image } from "astro:assets";
+    import Director from '../assets/index image/director.webp'
+---
+
 <section class="flex items-center justify-center w-full mt-40">
     <!-- If you want to add more statement section you need to copy this whole div and change the md:flex-row class to md:flex-row-reverse and add margin top or padding top -->
     <div class="flex items-center justify-center flex-col-reverse md:flex-row max-w-7xl">
@@ -18,7 +23,7 @@
             </div>
         </article>
         <figure class="">
-            <img src="/director.webp" alt="Director Photo" class="w-full h-full object-cover">
+            <Image src={Director} alt="LURUH Director" decoding="async" loading="lazy" class="w-full h-full object-cover"/>
         </figure>
         <h3 class="md:hidden font-serif text-[24px] font-bold">A Note from the Director</h3>
     </div>

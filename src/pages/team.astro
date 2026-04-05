@@ -1,7 +1,31 @@
-    ---
+---
+    import { Image } from 'astro:assets';
     import Layout from '../layouts/Layout.astro';
     import CrewCard from '../components/crewCard.astro';
-    ---
+    import Fernanda from '../assets/crew/Fernanda.webp';
+    import Jenna from '../assets/crew/Jenna 3.webp';
+    import Gita from '../assets/crew/Gita 2.webp';
+    import Ani from '../assets/crew/Ani.webp';
+    import Yoga from '../assets/crew/Yoga.webp';
+    import Anwar from '../assets/crew/Anwar 2.webp';
+    import Aldi from '../assets/crew/Aldi.webp';
+    import Dapit from '../assets/crew/Dapit.webp';
+    import Iskandar from '../assets/crew/Iskandar.webp';
+    import Habibi from '../assets/crew/Habib.webp';
+    import Raffi from '../assets/crew/Rafi.webp';
+    import Fawaz from '../assets/crew/Fawaz.webp';
+    import Hara from '../assets/crew/Hara.webp';
+    import Ucup from '../assets/crew/Ucup.webp';
+    import Gofar from '../assets/crew/Gofar.webp';
+    import Lea from '../assets/crew/Lea.webp';
+    import Nanda from '../assets/crew/Nanda.webp';
+    import Jeni from '../assets/crew/Jeni.webp';
+    import Anggia from '../assets/crew/Anggia.webp';
+    import Adi from '../assets/crew/Adi 2.webp';
+    import Acong from '../assets/crew/Aconk 2.webp';
+    import Feli from '../assets/crew/Feli.webp';
+    import Bima from '../assets/crew/Bima.webp'
+---
 
     <Layout title='Our Team | Pro Grace Production'>
     <main class="flex items-center justify-center flex-col">
@@ -10,73 +34,73 @@
             <h2 class="font-serif text-1xl tracking-wide text-nowrap md:text-2xl pb-10">The Team Who Made LURUH Possible</h2>
             <div class="grid grid-cols-12 gap-6">
                 <figure class="crew-card">
-                    <CrewCard name='Fernanda Bagus Prasetya' role='Producer' link='https://www.instagram.com/ferndaa__/' imagePath='/crew/Fernanda.webp'/>
+                    <CrewCard name='Fernanda Bagus Prasetya' role='Producer' link='https://www.instagram.com/ferndaa__/' load="eager" imagePath={Fernanda}/>
                 </figure>
                 <figure class="crew-card">
-                    <CrewCard name='Sajna Nuraini Sabilla Fitri' role='Line Producer' link='https://www.instagram.com/sajnanr/' imagePath='/crew/Jenna 3.webp'/>
+                    <CrewCard name='Sajna Nuraini Sabilla Fitri' role='Line Producer' link='https://www.instagram.com/sajnanr/' imagePath={Jenna}/>
                 </figure>
                 <figure class="crew-card">
-                    <CrewCard name='Gita Talia' role='Director' link='https://www.instagram.com/gtlyssrt_/' imagePath='/crew/Gita 2.webp'/>
+                    <CrewCard name='Gita Talia' role='Director' link='https://www.instagram.com/gtlyssrt_/' imagePath={Gita}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Fitriyani' role='1st Assistant Director' link='https://www.instagram.com/fiyannii/' imagePath='/crew/Ani.webp'/>
+                    <CrewCard name='Fitriyani' role='1st Assistant Director' link='https://www.instagram.com/fiyannii/' imagePath={Ani}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Ahmad Yoga Pratama' role='2nd Assistan Director' link='https://www.instagram.com/yga_002/' imagePath='/crew/Yoga.webp'/>
+                    <CrewCard name='Ahmad Yoga Pratama' role='2nd Assistan Director' link='https://www.instagram.com/yga_002/' imagePath={Yoga}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Mohammad Anwar' role='Editor' link='https://www.instagram.com/anwaarre/' imagePath='/crew/Anwar 2.webp'/>
+                    <CrewCard name='Mohammad Anwar' role='Editor' link='https://www.instagram.com/anwaarre/' imagePath={Anwar}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Aldi Saputra Dwi Rangga' role='Scriptwriter' link='https://www.instagram.com/aldispttga/' imagePath='/crew/Aldi.webp'/>
+                    <CrewCard name='Aldi Saputra Dwi Rangga' role='Scriptwriter' link='https://www.instagram.com/aldispttga/' imagePath={Aldi}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Davit Kurniawan' role='Director of Photography' link='https://www.instagram.com/si_kurpit/' imagePath='/crew/Dapit.webp'/>
+                    <CrewCard name='Davit Kurniawan' role='Director of Photography' link='https://www.instagram.com/si_kurpit/' imagePath={Dapit}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Mohammad Noor Iskandar' role='Assistant Camera' link='https://www.instagram.com/_howong_/' imagePath='/crew/Iskandar.webp'/>
+                    <CrewCard name='Mohammad Noor Iskandar' role='Assistant Camera' link='https://www.instagram.com/_howong_/' imagePath={Iskandar}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Muhammad Munthaha M' role='Sound Recordist' link='https://www.instagram.com/habiboiy/' imagePath='/crew/Habib.webp'/>
+                    <CrewCard name='Muhammad Munthaha M' role='Sound Recordist' link='https://www.instagram.com/habiboiy/' imagePath={Habibi}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Raffi Ilham Zeftyatala' role='Boom Operator' link='https://www.instagram.com/raffiilham205/' imagePath='/crew/Rafi.webp'/>
+                    <CrewCard name='Raffi Ilham Zeftyatala' role='Boom Operator' link='https://www.instagram.com/raffiilham205/' imagePath={Raffi}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Fawaz Alwan Nafi' role='Gaffer' link='https://www.instagram.com/fau.waz/' imagePath='/crew/Fawaz.webp'/>
+                    <CrewCard name='Fawaz Alwan Nafi' role='Gaffer' link='https://www.instagram.com/fau.waz/' imagePath={Fawaz}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Khuzaimah Nur Sahara' role='1st Lightning Crew' link='https://www.instagram.com/ngdt_one/' imagePath='/crew/Hara.webp'/>
+                    <CrewCard name='Khuzaimah Nur Sahara' role='1st Lightning Crew' link='https://www.instagram.com/ngdt_one/' imagePath={Hara}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Favian Sakhi Yusuf' role='2nd Lighting Crew' link='https://www.instagram.com/faviansakhiyusuf/' imagePath='/crew/Ucup.webp'/>
+                    <CrewCard name='Favian Sakhi Yusuf' role='2nd Lighting Crew' link='https://www.instagram.com/faviansakhiyusuf/' imagePath={Ucup}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Goffar Hasan Nur Herjuno' role='Location Manager' link='https://www.instagram.com/gofarhasan87/' imagePath='/crew/Gofar.webp'/>
+                    <CrewCard name='Goffar Hasan Nur Herjuno' role='Location Manager' link='https://www.instagram.com/gofarhasan87/' imagePath={Gofar}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Lingga Eleazar Eureka Mojo' role='Script Timecode' link='https://www.instagram.com/linggaeleazarr/' imagePath='/crew/Lea.webp'/>
+                    <CrewCard name='Lingga Eleazar Eureka Mojo' role='Script Timecode' link='https://www.instagram.com/linggaeleazarr/' imagePath={Lea}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Ananda Betrics Martina M' role='Talent Coordinator' link='https://www.instagram.com/_betricsnif_/' imagePath='/crew/Nanda.webp'/>
+                    <CrewCard name='Ananda Betrics Martina M' role='Talent Coordinator' link='https://www.instagram.com/_betricsnif_/' imagePath={Nanda}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Jeni Dina Ardita' role='Make Up Artist' link='https://www.instagram.com/jeni.jenoell/' imagePath='/crew/Jeni.webp'/>
+                    <CrewCard name='Jeni Dina Ardita' role='Make Up Artist' link='https://www.instagram.com/jeni.jenoell/' imagePath={Jeni}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Anggia Hasna Nur Aini' role='Wardrobe' link='https://www.instagram.com/hsnanggia_/' imagePath='/crew/Anggia.webp'/>
+                    <CrewCard name='Anggia Hasna Nur Aini' role='Wardrobe' link='https://www.instagram.com/hsnanggia_/' imagePath={Anggia}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Adiwijaya' role='Clapper & Art Crew' link='https://www.instagram.com/_adii29/' imagePath='/crew/Adi 2.webp'/>
+                    <CrewCard name='Adiwijaya' role='Clapper & Art Crew' link='https://www.instagram.com/_adii29/' imagePath={Adi}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Lingga Arifudin Halim' role='Art Director' link='https://www.instagram.com/linggarfdn/' imagePath='/crew/Aconk 2.webp'/>
+                    <CrewCard name='Lingga Arifudin Halim' role='Art Director' link='https://www.instagram.com/linggarfdn/' imagePath={Acong}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Rafelia Kayyis Khayyu Ulya' role='Social Media Admin & Art Crew' link='https://www.instagram.com/rrafeliaaa/' imagePath='/crew/Feli.webp'/>
+                    <CrewCard name='Rafelia Kayyis Khayyu Ulya' role='Social Media Admin & Art Crew' link='https://www.instagram.com/rrafeliaaa/' imagePath={Feli}/>
                 </figure>
                 <figure class="crew-card lg:col-span-3">
-                    <CrewCard name='Krisetya Bima Hartanta' role='Bawang Kotong' link='https://www.instagram.com/bimafiladelfia/' imagePath='/crew/Bima.webp'/>
+                    <CrewCard name='Krisetya Bima Hartanta' role='Bawang Kotong' link='https://www.instagram.com/bimafiladelfia/' imagePath={Bima}/>
                 </figure>
                 
             </div>

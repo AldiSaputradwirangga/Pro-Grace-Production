@@ -1,6 +1,11 @@
+---
+import { Image } from "astro:assets"
+import ctaImage from '../assets/index image/CTA.webp'
+---
 <section class="flex items-center justify-center my-40 p-5">
     <figure class="max-w-7xl relative">
-        <img src="/CTA.webp" alt="Jeni doing make up" class="h-107.5 object-cover object-[70%_center] rounded-2xl">
+        <Image src={ctaImage} alt="Doing Make up" height={500} width={1280} decoding="async" loading="lazy" class="h-107.5 object-cover object-[70%_center] rounded-2xl"/>
+        <!-- <img src={ctaImage.src} alt="Jeni doing make up" class="h-107.5 object-cover object-[70%_center] rounded-2xl"> -->
         <div class="absolute inset-0 bg-black/25 rounded-2xl pointer-events-none"></div>
         <div class="absolute inset-0 right-[40%] bg-black/25 backdrop-blur-xs mask-[linear-gradient(to_right,black_90%,transparent_100%)] hidden md:block rounded-2xl pointer-events-none"></div>
         <div class="absolute left-5 bottom-10 md:left-10 md:inset-0 md:right-[50%] flex flex-col md:gap-6 justify-center items-start gap-5 p-5 z-5">

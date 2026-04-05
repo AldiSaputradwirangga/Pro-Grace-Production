@@ -1,8 +1,14 @@
+---
+    import {Image} from 'astro:assets';
+    import aboutImage1 from '../assets/index image/Orang manis.webp';
+    import aboutImage2 from '../assets/index image/Perkumpulan Orang.webp';
+---
+
 
     <section class="flex flex-col items-end bg-[#0f0f0f] pb-20">
         <div class="gap-6 justify-end mt-20 flex h-87.5 lg:ml-5">
-            <img src="/Orang manis.webp" alt="Crew Photo" class="rounded-s-2xl h-full object-cover ml-30 sm:ml-20 md:ml-10 lg:ml-0">
-            <img src="/Perkumpulan Orang.webp" alt="Photo of eight people gathering during shooting" class="w-full h-full object-cover object-[50%_center]">
+            <Image src={aboutImage1} alt="Pro Grace Crew" decoding="async" loading="lazy" class="rounded-s-2xl h-full object-cover ml-30 sm:ml-20 md:ml-10 lg:ml-0"/>
+            <Image src={aboutImage2} alt="Eight people gathering during shooting" decoding="async" loading="lazy" class="w-full h-full object-cover object-[50%_center]"/>
         </div>
         <div class="flex flex-col md:flex-row items-center gap-6 mt-6 p-5 md:mt-5 justify-end max-w-380 md:p-0 md:gap-28 md:items-stretch lg:ml-5">
             <h2 class="font-serif font-bold tracking-wide text-wrap text-[24px] md:text-4xl md:ml-10 lg:ml-0">ABOUT US</h2>

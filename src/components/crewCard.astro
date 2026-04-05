@@ -1,20 +1,23 @@
-    ---
+---
+    import { Image } from 'astro:assets';
+import type { ImageFunction } from 'astro:content';
     interface Props {
         name: string;
         role: string;
         link: string;
-        imagePath: string;
+        imagePath: ImageMetadata;
     }
     const {name, role, link, imagePath} = Astro.props;
-    ---
+---
 
         <div class="aspect-square bg-[#003329] rounded-t-2xl">
-            <img src={imagePath} alt={name} class="w-full h-full object-cover brightness-90">
+            <Image src={imagePath} alt={name} loading="lazy" decoding="async" class="w-full h-full object-cover brightness-90"/>
         </div>
         <div class="flex flex-col items-center justify-center p-2 bg-[#212121]/90">
             <span class="font-serif text-[20px] font-bold tracking-wide text-nowrap">{name}</span>
             <span class="font-serif tracking-wide text-[18px] text-nowrap">{role}</span>
              <a href={link} class="py-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                <title>Instagram</title></svg>
             </a>
         </div>
