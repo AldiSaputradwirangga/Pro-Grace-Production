@@ -1,12 +1,97 @@
-    ---
+---
+    import { Image } from "astro:assets";
     import Layout from "../layouts/Layout.astro";
-    ---
+    import CrewCredit from "../components/crewCredit.astro";
+
+// Stills
+    import stills from '../assets/luruh/Luruh Stills.webp'
+
+// Sponsor
+    import DMA from '../assets/luruh/sponsor/DMA.webp';
+    import Nanku from '../assets/luruh/sponsor/Nanku.webp';
+    import Padski from '../assets/luruh/sponsor/PADSKILOGO.webp';
+    import Raihan from '../assets/luruh/sponsor/Raihan.webp';
+
+// Support
+    import audioGood from '../assets/luruh/support/Audio Good.webp';
+    import balemas from '../assets/luruh/support/Balemas Singlon.webp';
+    import bsm from '../assets/luruh/support/BSM.webp';
+    import muvi from '../assets/luruh/support/Muvi Id.webp';
+    import pinky from '../assets/luruh/support/Pinky.webp';
+    
+// Talent
+    import Maryam from '../assets/luruh team/Maryam.webp';
+    import Lastri from '../assets/luruh team/Lastri.webp';
+    import Pahlawan from '../assets/luruh team/Sarintem.webp';
+    import Murniati from '../assets/luruh team/Bu RT.webp';
+
+// Text
+    const textZinc = 'text-zinc-500';
+    const textGreen = 'text-[#1F8674]';
+
+// Crew
+    import Fernanda from '../assets/luruh team/Fernanda.webp';
+    import Jenna from '../assets/luruh team/Jenna.webp';
+    import Gita from '../assets/luruh team/Gita.webp';
+    import Aldi from '../assets/luruh team/Aldi.webp';
+    import Anwar from '../assets/luruh team/Anwar.webp';
+    import Ani from '../assets/luruh team/Ani.webp';
+    import Dapit from '../assets/luruh team/Dapit.webp';
+    import Habibi from '../assets/luruh team/Habib.webp';
+    import Fawaz from '../assets/luruh team/Fawaz.webp';
+    import Jeni from '../assets/luruh team/Jeni.webp';
+    import Anggia from '../assets/luruh team/Anggia.webp';
+    import Nanda from '../assets/luruh team/Nanda.webp';
+    import Gofar from '../assets/luruh team/Gofar.webp';
+    import Lea from '../assets/luruh team/Lea.webp';
+    import Acong from '../assets/luruh team/Aconk.webp';
+    import Feli from '../assets/luruh team/Feli.webp';
+    import Adi from '../assets/luruh team/Adi.webp';
+    import Yoga from '../assets/luruh team/Yoga.webp';
+    import Iskandar from '../assets/luruh team/Iskandar.webp';
+    import Hara from '../assets/luruh team/Hara.webp';
+    import Ucup from '../assets/luruh team/Ucup.webp';
+    import Rafi from '../assets/luruh team/Rafi.webp';
+    import Bima from '../assets/luruh team/Bima.webp';
+
+// Talent
+    const maryamData = {name: 'Maychelina Anis Nugraheni', role: "Maryam"}
+    const lastriData = {name: 'Krisanita Dina', role: 'Lastri'}
+    const pahlawanData = {name: 'Pahlawan Kusumaningsih', role: 'Sarintem'}
+    const murniatiData = {name: 'Murniati', role: 'BU RT'}
+
+// Crew
+    const fernandaData = {name: 'Fernanda Bagus Prasetya', role: 'producer'}
+    const jennaData = {name: 'Sajna Nuraini Sabilla Fitri', role: 'line producer', imagePath: Jenna}
+    const gitaData = {name: 'Gita Talia', role: 'director', imagePath: Gita}
+    const aldiData = {name: 'Aldi Saputra Dwi Rangga', role: 'Scriptwriter'}
+    const anwarData = {name: 'Mohammad Anwar', role: 'Editor'}
+    const aniData = {name: 'Fitriyani', role: '1st AD'}
+    const dapitData = {name: 'Davit Kurniawan', role: 'DOP'}
+    const habibiData = {name: 'Muhammad Munthaha Mujtaba', role: 'sound recordist'}
+    const fawazData = {name: 'Fawaz Alwan Nafi', role: 'Gaffer'}
+    const jeniData = {name: 'Jeni Dina Ardita', role: 'make up artist'}
+    const anggiaData = {name: 'Anggia Hasna Nur Aini', role:'wardrobe'}
+    const nandaData = {name: 'Ananda Betrics Martina Nifmaskossu', role: 'Talent Coordinator'}
+    const gofarData = {name: 'Goffar Hasan Nur Herjuno', role: 'location manager'}
+    const leaData = {name: 'Lingga Eleazar Eureka Mojo', role: 'script report'}
+    const acongData = {name: 'Lingga Arifudin Halim', role: 'Art Director'}
+    const feliData = {name: 'Rafelia Kayyis Khayyu Ulya', role: 'art crew'}
+    const adiData = {name: 'Adiwijaya', role: 'Clapper'}
+    const yogaData = {name: 'Ahmad Yoga Pratama', role: '2nd ad'}
+    const iskandarData = {name: 'Mohammad Noor Iskandar', role: 'assistant camera'}
+    const haraData = {name: 'Khuzaimah Nur Sahara', role: 'lighting crew'}
+    const ucupData = {name: 'Favian Sakhi Yusuf', role: 'lighting crew'}
+    const rafiData = {name: 'Raffi Ilham Zeftyatala', role: 'boom operator'}
+    const bimaData = {name: 'Krisetya Bima Hartanta', role:'bawang kotong'}
+
+---
 
     <Layout title="LURUH | Pro Grace Production">
         <main>
             <section class="sm:mt-15 md:mt-0">
                 <div class="aspect-9/16 sm:aspect-auto relative">
-                    <img src="/Luruh Stills.webp" alt="LURUH Still" class="h-full w-full object-cover  object-[70%_center]">
+                    <Image src={stills} alt="LURUH Still" class="h-full w-full object-cover  object-[70%_center]" loading='eager' decoding='async'/>
                     <div class="absolute inset-0 top-[70%] bg-[#161616] mask-[linear-gradient(to_top,black_10%,transparent_100%)]"></div>
                     <div class="absolute bottom-5 left-5 md:left-0 lg:left-15 flex flex-col gap-6 p-2">
                         <div>
@@ -14,7 +99,7 @@
                             <h1 class="font-heading text-6xl font-medium lg:text-8xl -mt-2">LURUH</h1>
                         </div>
                         <div class="flex items-center justify-start gap-2">
-                            <a href="#" class="flex items-center justify-center gap-2 bg-[#003229] py-2 px-4 font-display text-[12px] font-semibold rounded-[10px] tracking-wide transition-all duration-300 hover:bg-[#002d24]">
+                            <a href="https://www.instagram.com/prograce.production/reel/DUAITn8Ef-C/" class="flex items-center justify-center gap-2 bg-[#003229] py-2 px-4 font-display text-[12px] font-semibold rounded-[10px] tracking-wide transition-all duration-300 hover:bg-[#002d24]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
                                 <span>WATCH TRAILER</span>
                             </a>
@@ -65,46 +150,15 @@
                     <p class="font-display opacity-40 font-medium italic tracking-wide">“A falling petal would never wither by the cruel erosion of time”</p>
                 </div>
             </section>
+
             <section class="max-w-7xl mx-auto px-5 my-10">
                 <h2 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold">Cast</h2>
                 <br>
                 <div class="gap-6 grid sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="team-card">
-                        <figure class="team-picture">
-                            <img src="/luruh team/Maryam.webp" alt="Anis" class="w-full h-full rounded-full object-cover">
-                        </figure>
-                        <div class="team-info flex flex-col min-w-0">
-                            <span class="team-name">Maychelina Anis Nugraheni</span>
-                            <span class="team-role">MARYAM</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture">
-                            <img src="/luruh team/Lastri.webp" alt="Dina" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Krisanita Dina</span>
-                            <span class="team-role">LASTRI</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture">
-                            <img src="/luruh team/Sarintem.webp" alt="Pahlawan" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Pahlawan Kusumaningsih</span>
-                            <span class="team-role">SARINTEM</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture">
-                            <img src="/luruh team/Bu RT.webp" alt="Murniati" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Murniati</span>
-                            <span class="team-role">BU RT</span>
-                        </div>
-                    </div>
+                    <CrewCredit name={maryamData.name} role={maryamData.role} imagePath={Maryam} textColor={textZinc}/>
+                    <CrewCredit name={lastriData.name} role={lastriData.role} imagePath={Lastri} textColor={textZinc}/>
+                    <CrewCredit name={pahlawanData.name} role={pahlawanData.role} imagePath={Pahlawan} textColor={textZinc}/>
+                    <CrewCredit name={murniatiData.name} role={murniatiData.role} imagePath={Murniati} textColor={textZinc}/>
                 </div>
             </section>
 
@@ -112,213 +166,29 @@
                 <h3 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold">Teams</h3>
                 <br>
                 <div class="gap-6 grid sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Fernanda.webp" alt="Fernanda" class="w-full h-full rounded-full object-cover">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Fernanda Bagus Prasetya</span>
-                            <span class="team-role text-[#1F8674]">PRODUCER</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Jenna.webp" alt="Jenna" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Sajna Nuraini Sabilla Fitri</span>
-                            <span class="team-role text-[#1F8674]">Line Producer</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Gita.webp" alt="Gita" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Gita Talia</span>
-                            <span class="team-role text-[#1F8674]">Director</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Aldi.webp" alt="Aldi" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Aldi Saputra Dwi Rangga</span>
-                            <span class="team-role text-[#1F8674]">Scriptwriter</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Anwar.webp" alt="Anwar" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Mohammad Anwar</span>
-                            <span class="team-role text-[#1F8674]">Editor</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Ani.webp" alt="Fitriyani" class="w-full h-full rounded-full object-cover">
-                        </figure>
-                        <div class="team-info flex flex-col min-w-0">
-                            <span class="team-name">Fitriyani</span>
-                            <span class="team-role text-[#1F8674]">1st Assistant Director</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Dapit.webp" alt="Davit" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Davit Kurniawan</span>
-                            <span class="team-role text-[#1F8674]">DOP</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Habib.webp" alt="Munthaha" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Muhammad Munthaha Mujtaba</span>
-                            <span class="team-role text-[#1F8674]">Sound Recordist</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Fawaz.webp" alt="Fawaz" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Fawaz Alwan Nafi</span>
-                            <span class="team-role text-[#1F8674]">Gaffer</span>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Jeni.webp" alt="Jeni" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Jeni Dina Ardita</span>
-                            <span class="team-role text-[#1F8674]">make up artist</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Anggia.webp" alt="Anggia" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Anggia Hasna Nur Aini</span>
-                            <span class="team-role text-[#1F8674]">wardrobe</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Nanda.webp" alt="Nanda" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Ananda Betrics Maritina Nifmaskossu</span>
-                            <span class="team-role text-[#1F8674]">talent coordinator</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Gofar.webp" alt="Gofar" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Goffar Hasan Nur Herjuno</span>
-                            <span class="team-role text-[#1F8674]">Location Manager</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Lea.webp" alt="Lea" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Lingga Eleazar Eureka Mojo</span>
-                            <span class="team-role text-[#1F8674]">Script timecode</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Aconk.webp" alt="Lingga" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Lingga Arifudin Halim</span>
-                            <span class="team-role text-[#1F8674]">art director</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Feli.webp" alt="Rafelia" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Rafelia Kayyis Khayyu Ulya</span>
-                            <span class="team-role text-[#1F8674]">Art Crew</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Adi.webp" alt="Adiwijaya" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Adiwijaya</span>
-                            <span class="team-role text-[#1F8674]">clapper, art crew</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Yoga.webp" alt="Yoga" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Ahmad Yoga Pratama</span>
-                            <span class="team-role text-[#1F8674]">2nd Assistand Director</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Iskandar.webp" alt="Iskandar" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Mohammad Noor Iskandar</span>
-                            <span class="team-role text-[#1F8674]">Assistant Camera</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Hara.webp" alt="Hara" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Khuzaimah Nur Sahara</span>
-                            <span class="team-role text-[#1F8674]">lighting crew</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Ucup.webp" alt="Favian" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Favian Sakhi Yusuf</span>
-                            <span class="team-role text-[#1F8674]">Lighting crew</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Rafi.webp" alt="Raffi" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Raffi Ilham Zeftyatala</span>
-                            <span class="team-role text-[#1F8674]">Boom Operator</span>
-                        </div>
-                    </div>
-                     <div class="team-card">
-                        <figure class="team-picture bg-[#003229] rounded-full">
-                            <img src="/luruh team/Bima.webp" alt="Bima" class="rounded-full">
-                        </figure>
-                        <div class="team-info">
-                            <span class="team-name">Krisetya Bima Hartanta</span>
-                            <span class="team-role text-[#1F8674]">bawang kotong</span>
-                        </div>
-                    </div>
+                    <CrewCredit name={fernandaData.name} role={fernandaData.role} imagePath={Fernanda} textColor={textGreen}/>
+                    <CrewCredit name={jennaData.name} role={jennaData.role} imagePath={Jenna} textColor={textGreen}/>
+                    <CrewCredit name={gitaData.name} role={gitaData.role} imagePath={Gita} textColor={textGreen}/>
+                    <CrewCredit name={aldiData.name} role={aldiData.role} imagePath={Aldi} textColor={textGreen}/>
+                    <CrewCredit name={anwarData.name} role={anwarData.role} imagePath={Anwar} textColor={textGreen}/>
+                    <CrewCredit name={aniData.name} role={aniData.role} imagePath={Ani} textColor={textGreen}/>
+                    <CrewCredit name={dapitData.name} role={dapitData.role} imagePath={Dapit} textColor={textGreen}/>
+                    <CrewCredit name={habibiData.name} role={habibiData.role} imagePath={Habibi} textColor={textGreen}/>
+                    <CrewCredit name={fawazData.name} role={fawazData.role} imagePath={Fawaz} textColor={textGreen}/>
+                    <CrewCredit name={jeniData.name} role={jeniData.role} imagePath={Jeni} textColor={textGreen}/>
+                    <CrewCredit name={anggiaData.name} role={anggiaData.role} imagePath={Anggia} textColor={textGreen}/>
+                    <CrewCredit name={nandaData.name} role={nandaData.role} imagePath={Nanda} textColor={textGreen}/>
+                    <CrewCredit name={gofarData.name} role={gofarData.role} imagePath={Gofar} textColor={textGreen}/>
+                    <CrewCredit name={leaData.name} role={leaData.role} imagePath={Lea} textColor={textGreen}/>
+                    <CrewCredit name={acongData.name} role={acongData.role} imagePath={Acong} textColor={textGreen}/>
+                    <CrewCredit name={feliData.name} role={feliData.role} imagePath={Feli} textColor={textGreen}/>
+                    <CrewCredit name={adiData.name} role={adiData.role} imagePath={Adi} textColor={textGreen}/>
+                    <CrewCredit name={yogaData.name} role={yogaData.role} imagePath={Yoga} textColor={textGreen}/>
+                    <CrewCredit name={iskandarData.name} role={iskandarData.role} imagePath={Iskandar} textColor={textGreen}/>
+                    <CrewCredit name={haraData.name} role={haraData.role} imagePath={Hara} textColor={textGreen}/>
+                    <CrewCredit name={ucupData.name} role={ucupData.role} imagePath={Ucup} textColor={textGreen}/>
+                    <CrewCredit name={rafiData.name} role={rafiData.role} imagePath={Rafi} textColor={textGreen}/>
+                    <CrewCredit name={bimaData.name} role={bimaData.role} imagePath={Bima} textColor={textGreen}/>
                 </div>
             </section>
 
@@ -326,19 +196,19 @@
                 <h2 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold mb-10">Support Equipment</h2>
                 <div class="grid place-content-center place-items-center gap-6 grid-cols-3 sm:grid-cols-5">
                     <figure class="w-25 aspect-auto">
-                        <img src="/support/Audio Good.webp" alt="Audio Good" class="w-full h-full object-cover">
+                        <Image src={audioGood} alt="Audio Good" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
+                    </figure>
+                    <figure class="w-25 aspect-square">
+                        <Image src={pinky} alt="Pinky" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                     <figure class="w-25 aspect-auto">
-                        <img src="/support/Pinky.webp" alt="Pinky" class="w-full h-full object-cover">
-                    </figure>
-                    <figure class="w-25 aspect-auto">
-                        <img src="/support/Muvi Id.webp" alt="Muvie ID" class="w-full h-full object-cover">
+                        <Image src={muvi} class="w-full h-full object-cover" decoding="async" loading="lazy" alt="MUVI ID"/>
                     </figure>
                     <figure class="w-25 aspect-autocol-span-5">
-                        <img src="/support/BSM.webp" alt="BSM" class="w-full h-full object-cover">
+                        <Image src={bsm} alt="BSM Rental" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                     <figure class="w-25 aspect-auto">
-                        <img src="/support/Balemas Singlon.webp" alt="Balemas Singlon" class="w-full h-full object-cover">
+                        <Image src={balemas} alt="Balemas Singlon" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                 </div>
             </section>
@@ -347,16 +217,16 @@
                 <h2 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold mb-10">Sponsor</h2>
                 <div class="grid place-content-center place-items-center gap-6 grid-cols-3 sm:grid-cols-5">
                     <figure class="w-25 aspect-auto">
-                        <img src="/sponsor/Nanku.webp" alt="Nanku Cofee" class="w-full h-full object-cover">
+                        <Image src={Nanku} alt="Nanku Coffee" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                     <figure class="w-25 aspect-auto">
-                        <img src="/sponsor/DMA.webp" alt="Digjaya Menoreh Abadi" class="w-full h-full object-cover">
+                        <Image src={DMA} alt="Digjaya Menoreh Abadi" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                     <figure class="w-25 aspect-auto">
-                        <img src="/sponsor/PADSKILOGO.webp" alt="Padepokan Seni Kirun" class="w-full h-full object-ver">
+                        <Image src={Padski} alt="Padepokan Seni Kirun" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>
                     <figure class="w-25 aspect-autocol-span-5">
-                        <img src="/sponsor/Raihan.webp" alt="Raihan Shaqr Marko" class="w-full h-full object-cover">
+                        <Image src={Raihan} alt="Raihan Shaqr Marko" class="w-full h-full object-cover" decoding="async" loading="lazy"/>
                     </figure>   
                 </div>
             </section>

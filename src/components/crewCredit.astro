@@ -1,0 +1,19 @@
+---
+    import { Image } from "astro:assets";
+    interface Props {
+        name: string;
+        role: string;
+        textColor: string;
+        imagePath: ImageMetadata;
+    }
+    const {name, role, textColor, imagePath} = Astro.props;
+---
+<div class="team-card">
+     <figure class="team-picture bg-[#003229] rounded-full">
+        <Image src={imagePath} alt={name} loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover"/> 
+     </figure>
+     <div class="team-info flex flex-col min-w-0">
+         <span class="team-name">{name}</span>
+         <span class={`team-role ${textColor}`}>{role}</span>
+     </div>
+ </div>
