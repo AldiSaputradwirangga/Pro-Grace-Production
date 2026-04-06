@@ -3,6 +3,9 @@
     import Layout from "../layouts/Layout.astro";
     import CrewCredit from "../components/crewCredit.astro";
 
+// JSON
+    import teams from "../data/teams.json";
+
 // Stills
     import stills from '../assets/luruh/Luruh Stills.webp'
 
@@ -54,15 +57,9 @@
     import Rafi from '../assets/luruh team/Rafi.webp';
     import Bima from '../assets/luruh team/Bima.webp';
 
-// Talent
-    const maryamData = {name: 'Maychelina Anis Nugraheni', role: "Maryam"}
-    const lastriData = {name: 'Krisanita Dina', role: 'Lastri'}
-    const pahlawanData = {name: 'Pahlawan Kusumaningsih', role: 'Sarintem'}
-    const murniatiData = {name: 'Murniati', role: 'BU RT'}
-
 // Crew
-    const fernandaData = {name: 'Fernanda Bagus Prasetya', role: 'producer'}
-    const jennaData = {name: 'Sajna Nuraini Sabilla Fitri', role: 'line producer', imagePath: Jenna}
+    const fernandaData = {name: 'Fernanda Bagus Prasetya', role: 'producer', Ig: 'https://www.instagram.com/ferndaa__/'}
+    const jennaData = {name: 'Sajna Nuraini Sabilla Fitri', role: 'line producer', imagePath: Jenna, Ig: ''}
     const gitaData = {name: 'Gita Talia', role: 'director', imagePath: Gita}
     const aldiData = {name: 'Aldi Saputra Dwi Rangga', role: 'Scriptwriter'}
     const anwarData = {name: 'Mohammad Anwar', role: 'Editor'}
@@ -155,10 +152,10 @@
                 <h2 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold">Cast</h2>
                 <br>
                 <div class="gap-6 grid sm:grid-cols-2 lg:grid-cols-4">
-                    <CrewCredit name={maryamData.name} role={maryamData.role} imagePath={Maryam} textColor={textZinc}/>
-                    <CrewCredit name={lastriData.name} role={lastriData.role} imagePath={Lastri} textColor={textZinc}/>
-                    <CrewCredit name={pahlawanData.name} role={pahlawanData.role} imagePath={Pahlawan} textColor={textZinc}/>
-                    <CrewCredit name={murniatiData.name} role={murniatiData.role} imagePath={Murniati} textColor={textZinc}/>
+                    <CrewCredit name={teams.maryam.name} role={teams.maryam.role} imagePath={Maryam} textColor={textZinc} Ig={teams.maryam.instagram}/>
+                    <CrewCredit name={teams.lastri.name} role={teams.lastri.role} imagePath={Lastri} textColor={textZinc} Ig={teams.lastri.instagram}/>
+                    <CrewCredit name={teams.sarintem.name} role={teams.sarintem.role} imagePath={Pahlawan} textColor={textZinc} Ig={teams.sarintem.instagram}/>
+                    <CrewCredit name={teams.ibuRt.name} role={teams.ibuRt.role} imagePath={Murniati} textColor={textZinc} Ig={teams.ibuRt.instagram}/>
                 </div>
             </section>
 
@@ -166,29 +163,29 @@
                 <h3 class="font-serif text-center md:text-left text-[30px] sm:text-3xl font-bold">Teams</h3>
                 <br>
                 <div class="gap-6 grid sm:grid-cols-2 lg:grid-cols-4">
-                    <CrewCredit name={fernandaData.name} role={fernandaData.role} imagePath={Fernanda} textColor={textGreen}/>
-                    <CrewCredit name={jennaData.name} role={jennaData.role} imagePath={Jenna} textColor={textGreen}/>
-                    <CrewCredit name={gitaData.name} role={gitaData.role} imagePath={Gita} textColor={textGreen}/>
-                    <CrewCredit name={aldiData.name} role={aldiData.role} imagePath={Aldi} textColor={textGreen}/>
-                    <CrewCredit name={anwarData.name} role={anwarData.role} imagePath={Anwar} textColor={textGreen}/>
-                    <CrewCredit name={aniData.name} role={aniData.role} imagePath={Ani} textColor={textGreen}/>
-                    <CrewCredit name={dapitData.name} role={dapitData.role} imagePath={Dapit} textColor={textGreen}/>
-                    <CrewCredit name={habibiData.name} role={habibiData.role} imagePath={Habibi} textColor={textGreen}/>
-                    <CrewCredit name={fawazData.name} role={fawazData.role} imagePath={Fawaz} textColor={textGreen}/>
-                    <CrewCredit name={jeniData.name} role={jeniData.role} imagePath={Jeni} textColor={textGreen}/>
-                    <CrewCredit name={anggiaData.name} role={anggiaData.role} imagePath={Anggia} textColor={textGreen}/>
-                    <CrewCredit name={nandaData.name} role={nandaData.role} imagePath={Nanda} textColor={textGreen}/>
-                    <CrewCredit name={gofarData.name} role={gofarData.role} imagePath={Gofar} textColor={textGreen}/>
-                    <CrewCredit name={leaData.name} role={leaData.role} imagePath={Lea} textColor={textGreen}/>
-                    <CrewCredit name={acongData.name} role={acongData.role} imagePath={Acong} textColor={textGreen}/>
-                    <CrewCredit name={feliData.name} role={feliData.role} imagePath={Feli} textColor={textGreen}/>
-                    <CrewCredit name={adiData.name} role={adiData.role} imagePath={Adi} textColor={textGreen}/>
-                    <CrewCredit name={yogaData.name} role={yogaData.role} imagePath={Yoga} textColor={textGreen}/>
-                    <CrewCredit name={iskandarData.name} role={iskandarData.role} imagePath={Iskandar} textColor={textGreen}/>
-                    <CrewCredit name={haraData.name} role={haraData.role} imagePath={Hara} textColor={textGreen}/>
-                    <CrewCredit name={ucupData.name} role={ucupData.role} imagePath={Ucup} textColor={textGreen}/>
-                    <CrewCredit name={rafiData.name} role={rafiData.role} imagePath={Rafi} textColor={textGreen}/>
-                    <CrewCredit name={bimaData.name} role={bimaData.role} imagePath={Bima} textColor={textGreen}/>
+                    <CrewCredit name={teams.fernanda.name} role={teams.fernanda.role} imagePath={Fernanda} textColor={textGreen} Ig={teams.fernanda.instagram}/>
+                    <CrewCredit name={teams.jenna.name} role={teams.jenna.role} imagePath={Jenna} textColor={textGreen} Ig={teams.jenna.instagram}/>
+                    <CrewCredit name={teams.gita.name} role={teams.gita.role} imagePath={Gita} textColor={textGreen} Ig={teams.gita.instagram}/>
+                    <CrewCredit name={teams.aldi.name} role={teams.aldi.role} imagePath={Aldi} textColor={textGreen} Ig={teams.aldi.instagram}/>
+                    <CrewCredit name={teams.anwar.name} role={teams.anwar.role} imagePath={Anwar} textColor={textGreen} Ig={teams.anwar.instagram}/>
+                    <CrewCredit name={teams.fitriyani.name} role={teams.fitriyani.role} imagePath={Ani} textColor={textGreen} Ig={teams.fitriyani.instagram}/>
+                    <CrewCredit name={teams.dapit.name} role={teams.dapit.role} imagePath={Dapit} textColor={textGreen} Ig={teams.dapit.instagram}/>
+                    <CrewCredit name={teams.habib.name} role={teams.habib.role} imagePath={Habibi} textColor={textGreen} Ig={teams.habib.instagram}/>
+                    <CrewCredit name={teams.fawaz.name} role={teams.fawaz.role} imagePath={Fawaz} textColor={textGreen} Ig={teams.fawaz.instagram}/>
+                    <CrewCredit name={teams.jeni.name} role={teams.jeni.role} imagePath={Jeni} textColor={textGreen} Ig={teams.jeni.instagram}/>
+                    <CrewCredit name={teams.anggia.name} role={teams.anggia.role} imagePath={Anggia} textColor={textGreen} Ig={teams.anggia.instagram}/>
+                    <CrewCredit name={teams.nanda.name} role={teams.nanda.role} imagePath={Nanda} textColor={textGreen} Ig={teams.nanda.instagram}/>
+                    <CrewCredit name={teams.gofar.name} role={teams.gofar.role} imagePath={Gofar} textColor={textGreen} Ig={teams.gofar.instagram}/>
+                    <CrewCredit name={teams.lea.name} role={teams.lea.role} imagePath={Lea} textColor={textGreen} Ig={teams.lea.instagram}/>
+                    <CrewCredit name={teams.acong.name} role={teams.acong.role} imagePath={Acong} textColor={textGreen} Ig={teams.acong.instagram}/>
+                    <CrewCredit name={teams.feli.name} role={teams.feli.role} imagePath={Feli} textColor={textGreen} Ig={teams.feli.instagram}/>
+                    <CrewCredit name={teams.adi.name} role={teams.adi.role} imagePath={Adi} textColor={textGreen} Ig={teams.adi.instagram}/>
+                    <CrewCredit name={teams.adi.name} role={teams.adi.role} imagePath={Yoga} textColor={textGreen} Ig={teams.yoga.instagram}/>
+                    <CrewCredit name={teams.iskandar.name} role={teams.iskandar.role} imagePath={Iskandar} textColor={textGreen} Ig={teams.iskandar.instagram}/>
+                    <CrewCredit name={teams.hara.name} role={teams.hara.role} imagePath={Hara} textColor={textGreen} Ig={teams.hara.instagram}/>
+                    <CrewCredit name={teams.ucup.name} role={teams.ucup.role} imagePath={Ucup} textColor={textGreen} Ig={teams.ucup.instagram}/>
+                    <CrewCredit name={teams.rafi.name} role={teams.rafi.role} imagePath={Rafi} textColor={textGreen} Ig={teams.rafi.instagram}/>
+                    <CrewCredit name={teams.bima.name} role={teams.bima.role} imagePath={Bima} textColor={textGreen} Ig={teams.bima.instagram}/>    
                 </div>
             </section>
 

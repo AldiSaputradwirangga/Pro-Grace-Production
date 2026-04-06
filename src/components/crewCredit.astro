@@ -4,14 +4,17 @@
         name: string;
         role: string;
         textColor: string;
+        Ig: string;
         imagePath: ImageMetadata;
     }
-    const {name, role, textColor, imagePath} = Astro.props;
+    const {name, role, textColor, Ig, imagePath} = Astro.props;
 ---
 <div class="team-card">
-     <figure class="team-picture bg-[#003229] rounded-full">
-        <Image src={imagePath} alt={name} loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover"/> 
-     </figure>
+    <a href={Ig}>
+        <figure class="team-picture bg-[#003229] rounded-full">
+           <Image src={imagePath} alt={name} loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover"/> 
+        </figure>
+    </a>
      <div class="team-info flex flex-col min-w-0">
          <span class="team-name">{name}</span>
          <span class={`team-role ${textColor}`}>{role}</span>
